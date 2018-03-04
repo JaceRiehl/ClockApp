@@ -23,7 +23,7 @@
             android:layout_gravity="center_vertical|center_horizontal"
             android:layout_weight="0.08"
             android:orientation="horizontal"
-            android:weightSum="6">
+            android:weightSum="4">
 
             <TextView
                 android:id="@+id/_it"
@@ -38,16 +38,6 @@
                 android:textColor="@color/textLitUp" />
 
             <TextView
-                android:id="@+id/_l"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:includeFontPadding="false"
-                android:text="L"
-                android:textColor="@color/textNotLitUp" />
-
-            <TextView
                 android:id="@+id/_is"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
@@ -56,15 +46,6 @@
                 android:includeFontPadding="false"
                 android:text="I S"
                 android:textColor="@color/textLitUp" />
-
-            <TextView
-                android:id="@+id/_as"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="A S"
-                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_am"
@@ -93,27 +74,7 @@
             android:layout_weight="0.08"
             android:background="@color/clockBackground"
             android:orientation="horizontal"
-            android:weightSum="4">
-
-            <TextView
-                android:id="@+id/_a"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:includeFontPadding="false"
-                android:text="A"
-                android:textColor="@color/textNotLitUp" />
-
-            <TextView
-                android:id="@+id/_c"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:includeFontPadding="false"
-                android:text="C"
-                android:textColor="@color/textNotLitUp" />
+            android:weightSum="1">
 
             <TextView
                 android:id="@+id/_quarterTo"
@@ -125,14 +86,6 @@
                 android:text="Q U A R T E R"
                 android:textColor="@color/textNotLitUp" />
 
-            <TextView
-                android:id="@+id/_dc"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="D C" />
         </LinearLayout>
 
         <LinearLayout
@@ -142,34 +95,26 @@
             android:layout_weight="0.10"
             android:background="@color/clockBackground"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <TextView
                 android:id="@+id/_twentyTo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="T W E N T Y " />
+                android:text="T W E N T Y "
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_fiveTo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="F I V E" />
+                android:text="F I V E"
+                android:textColor="@color/textNotLitUp" />
 
-            <TextView
-                android:id="@+id/_x"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="X" />
         </LinearLayout>
 
         <LinearLayout
@@ -179,7 +124,7 @@
             android:layout_weight="0.04"
             android:background="@color/clockBackground"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="3">
 
             <TextView
                 android:id="@+id/_half"
@@ -192,42 +137,22 @@
                 android:textColor="@color/textNotLitUp" />
 
             <TextView
-                android:id="@+id/_s"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingLeft="-10dp"
-                android:paddingRight="-10dp"
-                android:text="S"
-                android:textColor="@color/textNotLitUp" />
-
-            <TextView
                 android:id="@+id/_tenTo"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="T E N" />
-
-            <TextView
-                android:id="@+id/_f"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="F" />
+                android:text="T E N"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_to"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="T O" />
+                android:text="T O"
+                android:textColor="@color/textNotLitUp" />
 
         </LinearLayout>
 
@@ -238,34 +163,25 @@
             android:layout_weight="0.10"
             android:background="@color/clockBackground"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <TextView
                 android:id="@+id/_past"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="P A S T" />
-
-            <TextView
-                android:id="@+id/_eru"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
-                android:gravity="center_vertical|center_horizontal"
-                android:text="E R U" />
+                android:text="P A S T"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_nine"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="N I N E" />
+                android:text="N I N E"
+                android:textColor="@color/textNotLitUp" />
         </LinearLayout>
 
         <LinearLayout
@@ -282,18 +198,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="O N E" />
+                android:text="O N E"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_six"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="S I X" />
+                android:text="S I X"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_three"
@@ -319,27 +235,27 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="F O U R" />
+                android:text="F O U R"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_five"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="F I V E" />
+                android:text="F I V E"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_two"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="T W O " />
+                android:text="T W O "
+                android:textColor="@color/textNotLitUp" />
         </LinearLayout>
 
         <LinearLayout
@@ -388,18 +304,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="S E V E N" />
+                android:text="S E V E N"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_twelve"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="T W E L V E" />
+                android:text="T W E L V E"
+                android:textColor="@color/textNotLitUp" />
         </LinearLayout>
 
         <LinearLayout
@@ -409,7 +325,7 @@
             android:layout_weight="0.05"
             android:background="@color/clockBackground"
             android:orientation="horizontal"
-            android:weightSum="3">
+            android:weightSum="2">
 
             <TextView
                 android:id="@+id/_ten"
@@ -422,24 +338,13 @@
                 android:textColor="@color/textNotLitUp" />
 
             <TextView
-                android:id="@+id/_se"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingLeft="-10dp"
-                android:paddingRight="-20dp"
-                android:text="S E"
-                android:textColor="@color/textNotLitUp" />
-
-            <TextView
                 android:id="@+id/_oclock"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="O'CLOCK" />
+                android:text="O'CLOCK"
+                android:textColor="@color/textNotLitUp" />
         </LinearLayout>
 
     </LinearLayout>

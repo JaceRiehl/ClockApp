@@ -97,6 +97,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView quarterTo = (TextView) findViewById(R.id._quarterTo);
         final TextView tenTo = (TextView) findViewById(R.id._tenTo);
         final TextView fiveTo = (TextView) findViewById(R.id._fiveTo);
+        final TextView oclock = (TextView) findViewById(R.id._oclock);
 
         Calendar ctime = Calendar.getInstance();
         int hour = ctime.get(Calendar.HOUR);
@@ -125,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
         past.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
         to.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
-
+        oclock.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
 
 
         //THE CALENDAR.HOUR is based on the emulators time.
@@ -174,8 +175,10 @@ public class MainActivity extends AppCompatActivity {
 
         if(min >= 35)
             to.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(min < 30 && min >= 5)
+        else if(min < 35 && min >= 5)
             past.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min < 5)
+            oclock.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
 
         if(min >= 30 && min < 35)
             half.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));

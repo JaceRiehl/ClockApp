@@ -179,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(min >= 30 && min < 35)
             half.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(min >= 20 && min < 30  || min >= 40 && min < 45)
+        else if(min >= 20 && min < 25  || min >= 40 && min < 45)
             twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         else if(min >= 5 && min < 10  || min >= 55 && min < 60)
             fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
@@ -187,9 +187,9 @@ public class MainActivity extends AppCompatActivity {
             quarterTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         else if(min >= 10 && min < 15  || min >= 50 && min < 55)
             tenTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(min >= 25 && min < 30  || min >= 35 && min < 40) {
-            twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min >= 25 && min < 30 || min >= 35 && min < 40) {
             fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
     }
 

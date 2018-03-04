@@ -123,6 +123,8 @@ public class MainActivity extends AppCompatActivity {
         quarterTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
         tenTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
         fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        past.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        to.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
 
 
 
@@ -132,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         } else if (Calendar.PM == amOrPm) {
             am.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
+
         if (9 == hour && min >= 35 || 10 == hour && min < 35){
             ten.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
@@ -171,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(min >= 35)
             to.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(min < 30)
+        else if(min < 30 && min >= 5)
             past.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
 
         if(min >= 30 && min < 35)

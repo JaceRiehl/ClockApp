@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     while (!isInterrupted()) {
-                        Thread.sleep(1000);
+                        Thread.sleep(2000);
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -132,40 +132,40 @@ public class MainActivity extends AppCompatActivity {
         } else if (Calendar.PM == amOrPm) {
             am.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
-        if (10 == hour || min >= 35 && hour == 9){
+        if (9 == hour && min >= 35 || 10 == hour && min < 35){
             ten.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
-        else if(11 == hour || min >= 35 && hour == 10) {
+        else if(10 == hour && min >= 35 || 11 == hour && min < 35) {
             eleven.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
-        else if(12 == hour || min >= 35 && hour == 11) {
+        else if(11 == hour && min >= 35 || 12 == hour && min < 35) {
             twelve.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
-        else if(1 == hour || min >= 35 && hour == 12) {
+        else if(12 == hour && min >= 35 || 1 == hour && min < 35) {
                 one.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             }
-        else if(2 == hour || min >= 35 && hour == 1) {
+        else if(1 == hour && min >= 35 || 2 == hour && min < 35) {
                 two.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             }
-        else if(3 == hour || min >= 35 && hour == 2) {
+        else if(2 == hour && min >= 35 || 3 == hour && min < 35) {
                 three.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             }
-        else if(4 == hour || min >= 35 && hour == 3) {
+        else if(3 == hour && min >= 35 || 4 == hour && min < 35) {
                 four.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             }
-        else if(5 == hour || min >= 35 && hour == 4) {
+        else if(4 == hour && min >= 35 || 5 == hour && min < 35) {
                 five.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             }
-        else if(6 == hour || min >= 35 && hour == 5) {
+        else if(5 == hour && min >= 35 || 6 == hour && min < 35) {
                 six.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             }
-        else if(7 == hour || min >= 35 && hour == 6) {
+        else if(6 == hour && min >= 35 || 7 == hour && min < 35) {
             seven.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
-        else if(8 == hour || min >= 35 && hour == 7) {
+        else if(7 == hour && min >= 35 || 8 == hour && min < 35) {
             eight.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
-        else if(9 == hour || min >= 35 && hour == 8) {
+        else if(8 == hour && min >= 35 || 9 == hour && min < 35) {
             nine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
 
@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity {
         else if(min < 30)
             past.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
 
-        if(min > 30 && min < 40)
+        if(min >= 30 && min < 35)
             half.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         else if(min >= 20 && min < 30  || min >= 40 && min < 45)
             twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
@@ -186,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
             tenTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         else if(min >= 25 && min < 30  || min >= 35 && min < 40) {
             twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-            five.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
         }
     }
 

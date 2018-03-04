@@ -46,6 +46,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Calendar;
+import android.util.Log;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -74,36 +75,119 @@ public class MainActivity extends AppCompatActivity {
         t.start();
     }
 
-    private void updateClockView(){
-        final TextView one = (TextView)findViewById(R.id._one);
-        final TextView two = (TextView)findViewById(R.id._two);
-        final TextView three = (TextView)findViewById(R.id._three);
-        final TextView four = (TextView)findViewById(R.id._four);
-        final TextView five = (TextView)findViewById(R.id._five);
-        final TextView six = (TextView)findViewById(R.id._six);
-        final TextView seven = (TextView)findViewById(R.id._seven);
-        final TextView eight = (TextView)findViewById(R.id._eight);
-        final TextView nine = (TextView)findViewById(R.id._nine);
-        final TextView ten = (TextView)findViewById(R.id._ten);
-        final TextView am = (TextView)findViewById(R.id._am);
-        final TextView pm = (TextView)findViewById(R.id._pm);
+    private void updateClockView() {
+        final TextView one = (TextView) findViewById(R.id._one);
+        final TextView two = (TextView) findViewById(R.id._two);
+        final TextView three = (TextView) findViewById(R.id._three);
+        final TextView four = (TextView) findViewById(R.id._four);
+        final TextView five = (TextView) findViewById(R.id._five);
+        final TextView six = (TextView) findViewById(R.id._six);
+        final TextView seven = (TextView) findViewById(R.id._seven);
+        final TextView eight = (TextView) findViewById(R.id._eight);
+        final TextView nine = (TextView) findViewById(R.id._nine);
+        final TextView ten = (TextView) findViewById(R.id._ten);
+        final TextView eleven = (TextView) findViewById(R.id._eleven);
+        final TextView twelve = (TextView) findViewById(R.id._twelve);
+        final TextView am = (TextView) findViewById(R.id._am);
+        final TextView pm = (TextView) findViewById(R.id._pm);
+        final TextView to = (TextView) findViewById(R.id._to);
+        final TextView past = (TextView) findViewById(R.id._past);
+        final TextView half = (TextView) findViewById(R.id._half);
+        final TextView twentyTo = (TextView) findViewById(R.id._twentyTo);
+        final TextView quarterTo = (TextView) findViewById(R.id._quarterTo);
+        final TextView tenTo = (TextView) findViewById(R.id._tenTo);
+        final TextView fiveTo = (TextView) findViewById(R.id._fiveTo);
 
         Calendar ctime = Calendar.getInstance();
-        String hour = Integer.toString(ctime.get(Calendar.HOUR));
-        String min = Integer.toString(ctime.get(Calendar.MINUTE));
-        String sec = Integer.toString(ctime.get(Calendar.SECOND));
+        int hour = ctime.get(Calendar.HOUR);
+        int min = ctime.get(Calendar.MINUTE);
+        int sec = ctime.get(Calendar.SECOND);
+        int amOrPm = ctime.get(Calendar.AM_PM);
 
-        if(Integer.parseInt(Integer.toString(ctime.get(Calendar.AM_PM))) == 1)
+        am.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        pm.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        one.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        two.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        three.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        four.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        five.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        six.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        seven.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        eight.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        nine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        ten.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        eleven.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        twelve.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        half.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        quarterTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        tenTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+        fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textNotLitUp));
+
+
+
+        //THE CALENDAR.HOUR is based on the emulators time.
+        if (Calendar.AM == amOrPm) {
             pm.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(Integer.toString(ctime.get(Calendar.AM_PM)) == "0")
+        } else if (Calendar.PM == amOrPm) {
             am.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
+        if (10 == hour || min >= 35 && hour == 9){
+            ten.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
+        else if(11 == hour || min >= 35 && hour == 10) {
+            eleven.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
+        else if(12 == hour || min >= 35 && hour == 11) {
+            twelve.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
+        else if(1 == hour || min >= 35 && hour == 12) {
+                one.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            }
+        else if(2 == hour || min >= 35 && hour == 1) {
+                two.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            }
+        else if(3 == hour || min >= 35 && hour == 2) {
+                three.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            }
+        else if(4 == hour || min >= 35 && hour == 3) {
+                four.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            }
+        else if(5 == hour || min >= 35 && hour == 4) {
+                five.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            }
+        else if(6 == hour || min >= 35 && hour == 5) {
+                six.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+            }
+        else if(7 == hour || min >= 35 && hour == 6) {
+            seven.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
+        else if(8 == hour || min >= 35 && hour == 7) {
+            eight.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
+        else if(9 == hour || min >= 35 && hour == 8) {
+            nine.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
 
-        if(hour == "3")
-            three.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(hour == "4")
-            four.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
-        else if(hour == "5")
+        if(min >= 35)
+            to.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min < 30)
+            past.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+
+        if(min > 30 && min < 40)
+            half.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min >= 20 && min < 30  || min >= 40 && min < 45)
+            twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min >= 5 && min < 10  || min >= 55 && min < 60)
+            fiveTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min >= 15 && min < 20  || min >= 45 && min < 50)
+            quarterTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min >= 10 && min < 15  || min >= 50 && min < 55)
+            tenTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        else if(min >= 25 && min < 30  || min >= 35 && min < 40) {
+            twentyTo.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
             five.setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.textLitUp));
+        }
     }
 
 }

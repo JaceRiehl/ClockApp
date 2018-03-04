@@ -33,10 +33,9 @@
                 android:cursorVisible="false"
                 android:gravity="center_vertical|center_horizontal"
                 android:includeFontPadding="false"
-                android:text="TextView"
+                android:text="I T"
                 android:textAllCaps="true"
-                android:textColor="@color/textLitUp"
-                tools:text="I T" />
+                android:textColor="@color/textLitUp" />
 
             <TextView
                 android:id="@+id/_l"
@@ -45,9 +44,8 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical|center_horizontal"
                 android:includeFontPadding="false"
-                android:text="TextView"
-                android:textColor="@color/textNotLitUp"
-                tools:text="L" />
+                android:text="L"
+                android:textColor="@color/textNotLitUp" />
 
             <TextView
                 android:id="@+id/_is"
@@ -298,13 +296,13 @@
                 android:text="S I X" />
 
             <TextView
-                android:id="@+id/textView14"
+                android:id="@+id/_three"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:textColor="@color/textNotLitUp"
                 android:gravity="center_vertical|center_horizontal"
-                android:text="TextView" />
+                android:text="T H R E E"
+                android:textColor="@color/textNotLitUp" />
         </LinearLayout>
 
         <LinearLayout
